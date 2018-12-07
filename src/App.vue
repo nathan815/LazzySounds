@@ -11,12 +11,8 @@
         }
       },
       methods: {
-        buttonVisibilityChanged(payload) {
-          console.log('button visiblility changed');
-          console.log(payload);
-        },
-          playSound() {
-            const path = require('./assets/mp3/oops.mp3');
+          playSound(fileName) {
+            const path = require('./assets/mp3/' + fileName);
             var audio = new Audio(path);
             audio.play();
           }
@@ -27,7 +23,7 @@
   <div id="app">
     <navbar />
       <div :key="file" v-for="file in files">
-          <button-test :text="file"></button-test>
+          <button-test @play-sound="playSound" :text="file"></button-test>
       </div>
     <router-view/>
   </div>

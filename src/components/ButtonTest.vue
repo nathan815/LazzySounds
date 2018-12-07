@@ -12,16 +12,15 @@
     computed: {
     },
     methods: {
-      toggle() {
-        this.isVisible = !this.isVisible;
-        this.$emit('visibility-change', this.isVisible);
+      emitPlayEvent() {
+        this.$emit('play-sound', this.text);
       }
     }
   }
 </script>
 <template>
   <div>
-  <button @click="toggle">
+  <button @click="emitPlayEvent">
     {{ text }}
   </button>
   <div v-if="isVisible">
