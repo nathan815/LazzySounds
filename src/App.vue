@@ -12,8 +12,8 @@
       },
       methods: {
           playSound(fileName) {
-            const path = require('./assets/mp3/' + fileName);
-            var audio = new Audio(path);
+            const path = require('./assets/mp3/' + fileName + '.mp3');
+            const audio = new Audio(path);
             audio.play();
           }
       }
@@ -22,9 +22,11 @@
 <template>
   <div id="app">
     <navbar />
-      <div :key="file" v-for="file in files">
-          <button-test @play-sound="playSound" :text="file"></button-test>
-      </div>
+
+    <div class="board">
+      <button-test v-for="file in files" :text="file" :key="file" @play-sound="playSound"></button-test>
+    </div>
+
     <router-view/>
   </div>
 </template>
