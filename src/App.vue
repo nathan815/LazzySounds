@@ -1,11 +1,10 @@
 <script>
   import Navbar from './Navbar';
-  import ButtonTest from './components/ButtonTest';
   import mp3s from './loadFiles';
   import SoundClipButton from './components/SoundClipButton';
   
   export default {
-      components: { Navbar, ButtonTest, SoundClipButton },
+      components: { Navbar, SoundClipButton },
       data() {
         return {
           hello: false,

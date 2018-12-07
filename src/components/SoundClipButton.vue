@@ -49,7 +49,6 @@
   }
   div:hover {
     opacity: 0.8;
-    transform: scale(1.05);
   }
   .emoji {
     font-size: 50px;
