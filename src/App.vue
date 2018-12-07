@@ -1,13 +1,20 @@
 <script>
   import Navbar from './Navbar';
+  import ButtonTest from './components/ButtonTest';
   export default {
-      components: { Navbar }
+      components: { Navbar, ButtonTest },
+      data() {
+        return {
+          hello: false
+        }
+      }
   }
 </script>
 <template>
   <div id="app">
     <navbar />
-
+    <button-test text="Hello world!!!" :visible="true" />
+    <button-test text="ANother one" :visible="false" />
     <router-view/>
   </div>
 </template>
