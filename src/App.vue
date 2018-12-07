@@ -12,7 +12,12 @@
         buttonVisibilityChanged(payload) {
           console.log('button visiblility changed')
           console.log(payload);
-        }
+        },
+          playSound() {
+            const path = require('./assets/mp3/oops.mp3');
+            var audio = new Audio(path);
+            audio.play();
+          }
       }
   }
 </script>
@@ -20,7 +25,7 @@
   <div id="app">
     <navbar />
     <button-test text="Hello world!!!" 
-                 @visibility-change="buttonVisibilityChanged"
+                 @visibility-change="playSound"
                  :visible="true" />
     <button-test text="ANother one" 
                  :visible="false" />
