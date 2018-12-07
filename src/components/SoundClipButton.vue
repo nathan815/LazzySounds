@@ -46,7 +46,7 @@
     font-size: 18px;
     cursor: pointer;
     transition: opacity 0.3s;
-    max-width: 25%;
+    width: 15%;
     vertical-align: middle;
   }
   div:hover {
