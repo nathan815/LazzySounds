@@ -28,7 +28,6 @@
     <div class="board">
         <sound-clip-button v-for="file in files" :key="file" v-bind:filename="file" @play-sound="playSound" />
     </div>
-
     <router-view/>
   </div>
 </template>
