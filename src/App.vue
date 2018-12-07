@@ -1,11 +1,13 @@
 <script>
   import Navbar from './Navbar';
   import ButtonTest from './components/ButtonTest';
+  import SoundClipButton from './components/SoundClipButton';
   export default {
-      components: { Navbar, ButtonTest },
+      components: { Navbar, ButtonTest, SoundClipButton },
       data() {
         return {
-          hello: false
+          hello: false,
+          soundFiles: ["1","2","3","4","5","6","7","8","9","10"]
         }
       },
       methods: {
@@ -24,6 +26,11 @@
                  :visible="true" />
     <button-test text="ANother one" 
                  :visible="false" />
+
+    <sound-clip-button v-for="file in soundFiles" v-bind:filename="file" />
+
+
+
     <router-view/>
   </div>
 </template>
