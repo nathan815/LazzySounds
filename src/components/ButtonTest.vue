@@ -10,9 +10,6 @@
       }
     },
     computed: {
-      uppercaseText() {
-        return 'prefix ' + this.text.toUpperCase();
-      }
     },
     methods: {
       toggle() {
@@ -25,7 +22,7 @@
 <template>
   <div>
   <button @click="toggle">
-    {{ uppercaseText }}
+    {{ text }}
   </button>
   <div v-if="isVisible">
     Dropdown content

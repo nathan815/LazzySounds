@@ -1,16 +1,18 @@
 <script>
   import Navbar from './Navbar';
   import ButtonTest from './components/ButtonTest';
+  import mp3s from './loadFiles';
   export default {
       components: { Navbar, ButtonTest },
       data() {
         return {
-          hello: false
+          hello: false,
+          files: mp3s
         }
       },
       methods: {
         buttonVisibilityChanged(payload) {
-          console.log('button visiblility changed')
+          console.log('button visiblility changed');
           console.log(payload);
         },
           playSound() {
@@ -24,11 +26,9 @@
 <template>
   <div id="app">
     <navbar />
-    <button-test text="Hello world!!!" 
-                 @visibility-change="playSound"
-                 :visible="true" />
-    <button-test text="ANother one" 
-                 :visible="false" />
+      <div :key="file" v-for="file in files">
+          <button-test :text="file"></button-test>
+      </div>
     <router-view/>
   </div>
 </template>
