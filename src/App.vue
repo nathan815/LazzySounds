@@ -7,14 +7,23 @@
         return {
           hello: false
         }
+      },
+      methods: {
+        buttonVisibilityChanged(payload) {
+          console.log('button visiblility changed')
+          console.log(payload);
+        }
       }
   }
 </script>
 <template>
   <div id="app">
     <navbar />
-    <button-test text="Hello world!!!" :visible="true" />
-    <button-test text="ANother one" :visible="false" />
+    <button-test text="Hello world!!!" 
+                 @visibility-change="buttonVisibilityChanged"
+                 :visible="true" />
+    <button-test text="ANother one" 
+                 :visible="false" />
     <router-view/>
   </div>
 </template>

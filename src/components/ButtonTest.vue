@@ -17,6 +17,7 @@
     methods: {
       toggle() {
         this.isVisible = !this.isVisible;
+        this.$emit('visibility-change', this.isVisible);
       }
     }
   }
