@@ -39,13 +39,15 @@
   div {
     background: white;
     color: #000;
-    border-radius: 5px;
+    border-radius: 15px;
     display: inline-block;
     margin: 10px;
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: opacity 0.3s;
+    max-width: 25%;
+    vertical-align: middle;
   }
   div:hover {
     opacity: 0.8;

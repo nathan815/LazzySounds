@@ -27,20 +27,24 @@
     <div class="board">
         <sound-clip-button v-for="file in files" :key="file" v-bind:filename="file" @play-sound="playSound" />
     </div>
-    <router-view/>
+
   </div>
 </template>
 
 <style lang="scss">
-body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #fff;
-  background: #111;
-}
-a {
-  color: #fff;
-}
+  .board {
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #fff;
+    background: #111;
+  }
+  a {
+    color: #fff;
+  }
 </style>

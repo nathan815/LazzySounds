@@ -6,14 +6,15 @@
 <template>
   <nav>
     <a href="/" class="logo">LazzySounds</a>
-    <ul>
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/about">About</router-link></li>
-    </ul>
   </nav>
 </template>
 
 <style scoped>
+  nav {
+    background: #222;
+    padding: 10px 0;
+    margin-bottom: 30px;
+  }
 .logo {
   font-size: 25px;
 }
