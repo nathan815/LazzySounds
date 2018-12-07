@@ -45,8 +45,13 @@
     padding: 10px;
     font-size: 18px;
     cursor: pointer;
+    transition: all 0.3s;
+  }
+  div:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
   }
   .emoji {
-    font-size: 40px;
+    font-size: 50px;
   }
 </style>
