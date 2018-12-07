@@ -2,12 +2,14 @@
   import Navbar from './Navbar';
   import ButtonTest from './components/ButtonTest';
   import mp3s from './loadFiles';
+  import SoundClipButton from './components/SoundClipButton';
+  
   export default {
-      components: { Navbar, ButtonTest },
+      components: { Navbar, ButtonTest, SoundClipButton },
       data() {
         return {
           hello: false,
-          files: mp3s
+          files: mp3s,
         }
       },
       methods: {
@@ -24,7 +26,7 @@
     <navbar />
 
     <div class="board">
-      <button-test v-for="file in files" :text="file" :key="file" @play-sound="playSound"></button-test>
+        <sound-clip-button v-for="file in files" :key="file" v-bind:filename="file" @play-sound="playSound" />
     </div>
 
     <router-view/>
