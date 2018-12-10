@@ -15,17 +15,18 @@
     background: #222;
     padding: 10px 0;
     margin-bottom: 30px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    text-align: center;
+    vertical-align: bottom;
   }
   nav img {
     width: 70px;
     margin-right: 5px;
+    vertical-align: top;
   }
   .name {
     font-size: 30px;
     text-decoration: none;
+    vertical-align: middle;
   }
   ul li {
     list-style-type: none;
